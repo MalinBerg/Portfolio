@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Malin | UX Designer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Custom Tailwind colors to create a more cohesive color scheme
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                // Brighter, more purple-toned dark colors for a cohesive look
+                'dark-purple-100': '#2E283C',
+                'dark-purple-200': '#282334'
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #2E283C;
+        }
+
+        .tool-logo {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+        }
+
+        .btn-glow {
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.6);
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Header & Navigation -->
+    <header class="bg-dark-purple-100 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            
+            <!-- UPDATED: Logo and Name Integration -->
+            <a href="index.html" class="flex items-center space-x-3 text-2xl font-bold text-gray-50 group">
+                <!-- Replace the src URL below with your actual logo image -->
+                <img 
+                    class="h-8 w-8 rounded-full ring-2 ring-purple-400 p-0.5 object-cover transition duration-300 group-hover:ring-purple-300" 
+                    src="https://i.imgur.com/Z7YoHbZ.png" 
+                    alt="Malin's Portfolio Logo"
+                >
+                <span>Malin</span>
+            </a>
+            
+            <nav>
+                <ul class="flex space-x-6 font-medium">
+                    <li><a href="about-me.html" class="text-gray-400 hover:text-purple-400 transition-colors duration-300">About</a></li>
+                    <li><a href="index.html#projects" class="text-gray-400 hover:text-purple-400 transition-colors duration-300">Projects</a></li>
+                    <li><a href="index.html#contact" class="text-gray-400 hover:text-purple-400 transition-colors duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Main About Section -->
+        <section class="py-16 sm:py-24 bg-dark-purple-200">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <!-- About Me Text Column -->
+                <div class="w-full">
+                    <h1 class="text-4xl font-extrabold text-purple-400 mb-2">About me</h1>
+                    <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                        <span class="text-purple-400 font-medium">Who am I? Thanks for asking!</span>
+                        <br><br>
+                        I’m a designer who loves being creative in spaces where design truly matters to others. A journey shouldn’t take miles when a desire path already exists.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                        This is what I’m working on in my journey to becoming a UX designer. With my passion for problem-solving and my love for learning new techniques and skills, I strive to create seamless experiences that guide users effortlessly.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed mb-12">
+                        When I’m offline I spend my time creating art and enjoying the beauty of Wermlands nature.
+                    </p>
+                </div>
+
+                <!-- Image Collage Section -->
+                <div class="mt-12 w-full">
+                    <div class="flex flex-col lg:flex-row lg:space-x-6 space-y-6 lg:space-y-0 items-center justify-center">
+                        <!-- Left Stack of Images -->
+                        <div class="flex flex-col space-y-6 w-full lg:w-1/3">
+                            <!-- START: Image Placeholder - Top Left Image -->
+                            <img src="https://i.imgur.com/iKHWsAH.png" class="rounded-lg shadow-xl w-full">
+                            <!-- END: Image Placeholder -->
+                            <!-- START: Image Placeholder - Bottom Left Image -->
+                            <img src="https://i.imgur.com/QpYSOMf.png" class="rounded-lg shadow-xl w-full">
+                            <!-- END: Image Placeholder -->
+                        </div>
+                        <!-- Middle Image (Tall) -->
+                        <div class="w-full lg:w-1/3 flex">
+                            <!-- START: Image Placeholder - Middle Image (Tall) -->
+                            <img src="https://i.imgur.com/W0dnTOi.png" class="rounded-lg shadow-xl w-full">
+                            <!-- END: Image Placeholder -->
+                        </div>
+                        <!-- Right Stack of Images -->
+                        <div class="flex flex-col space-y-6 w-full lg:w-1/3">
+                            <!-- START: Image Placeholder - Top Right Image -->
+                            <img src="https://i.imgur.com/nLPeNbO.png" class="rounded-lg shadow-xl w-full">
+                            <!-- END: Image Placeholder -->
+                            <!-- START: Image Placeholder - Bottom Right Image -->
+                            <img src="https://i.imgur.com/xiAzIwb.png" class="rounded-lg shadow-xl w-full">
+                            <!-- END: Image Placeholder -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Container for Philosophy and Journey -->
+                <div class="mt-16 flex flex-col lg:flex-row lg:space-x-12">
+                    <!-- My Design Philosophy -->
+                    <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
+                        <h2 class="text-3xl font-bold text-purple-400 mb-4">My design philosophy</h2>
+                        <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                            I believe that design should always meet the needs of users while staying true to the project itself. With the right amount of research and a willingness to iterate, a strong end result will always show through. One that speak to the users - the people.
+                        </p>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            Colors and shape languages speak more than text and therefor I tend to work with design that is understandable without neededing long texts to explain. Be that through a good hierarky and flow or just by having the right pictures and icons.
+                        </p>
+                    </div>
+
+                    <!-- My UX Journey -->
+                    <div class="w-full lg:w-1/2">
+                        <h2 class="text-3xl font-bold text-purple-400 mb-4">My UX journey</h2>
+                        <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                            I have always loved being creative—whether through art, games, or storytelling. So when I first started my journey in an indie game course, I fell in love with the visual storytelling that UI and game art created. From there I realized that I could guide players and help them understand what to do without relying on words.
+                        </p>
+                        <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                            This path eventually led me to the world of UX, and that’s when everything clicked.
+                        </p>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            Now, I’m studying to become a full-fledged UX designer, with my passion for UI and visual storytelling guiding me through each project.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="my-16 border-gray-700">
+
+                <!-- My Skills Section (New, Modern Version) -->
+                <div class="text-center">
+                    <h2 class="text-4xl font-extrabold text-gray-50 mb-12">My Skills</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Skill Card 1 -->
+                        <div class="bg-dark-purple-100 rounded-lg p-6 shadow-xl transition-transform transform hover:scale-105">
+                            <h3 class="text-xl font-semibold text-purple-400 mb-2">UI/UX Design Tools</h3>
+                            <p class="text-gray-300">
+                                Proficient in industry-standard tools for creating wireframes, prototypes, and high-fidelity mockups.
+                            </p>
+                            <p class="text-sm font-bold mt-4 text-gray-400">Figma / Canva / Photoshop</p>
+                        </div>
+
+                        <!-- Skill Card 2 -->
+                        <div class="bg-dark-purple-100 rounded-lg p-6 shadow-xl transition-transform transform hover:scale-105">
+                            <h3 class="text-xl font-semibold text-purple-400 mb-2">User-Centered Design</h3>
+                            <p class="text-gray-300">
+                                Experienced in conducting user research, crafting personas, and applying design thinking principles.
+                            </p>
+                            <p class="text-sm font-bold mt-4 text-gray-400">UX Design and thinking</p>
+                        </div>
+
+                        <!-- Skill Card 3 -->
+                        <div class="bg-dark-purple-100 rounded-lg p-6 shadow-xl transition-transform transform hover:scale-105">
+                            <h3 class="text-xl font-semibold text-purple-400 mb-2">Web Accessibility</h3>
+                            <p class="text-gray-300">
+                                Knowledgeable in creating inclusive designs that comply with WCAG standards for all users.
+                            </p>
+                            <p class="text-sm font-bold mt-4 text-gray-400">WCAG</p>
+                        </div>
+
+                        <!-- Skill Card 4 -->
+                        <div class="bg-dark-purple-100 rounded-lg p-6 shadow-xl transition-transform transform hover:scale-105">
+                            <h3 class="text-xl font-semibold text-purple-400 mb-2">Visual & Graphic Design</h3>
+                            <p class="text-gray-300">
+                                Skilled in visual hierarchy, color theory, and typography to create compelling and effective UI.
+                            </p>
+                            <p class="text-sm font-bold mt-4 text-gray-400">UI/UX Graphic design</p>
+                        </div>
+
+                        <!-- Skill Card 5 -->
+                        <div class="bg-dark-purple-100 rounded-lg p-6 shadow-xl transition-transform transform hover:scale-105">
+                            <h3 class="text-xl font-semibold text-purple-400 mb-2">User Research & Analytics</h3>
+                            <p class="text-gray-300">
+                                Adept at gathering and analyzing user data through interviews, surveys, and usability testing to inform design decisions.
+                            </p>
+                            <p class="text-sm font-bold mt-4 text-gray-400">User Interviews / Surveys / Usability Testing</p>
+                        </div>
+
+                        <!-- Skill Card 6 -->
+                        <div class="bg-dark-purple-100 rounded-lg p-6 shadow-xl transition-transform transform hover:scale-105">
+                            <h3 class="text-xl font-semibold text-purple-400 mb-2">Information Architecture & Content Strategy</h3>
+                            <p class="text-gray-300">
+                                Skilled in structuring and organizing content to create intuitive and seamless user flows and journeys.
+                            </p>
+                            <p class="text-sm font-bold mt-4 text-gray-400">Card Sorting / Site Maps / User Flows</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Tools I Use Section -->
+                <div class="mt-16 text-center">
+                    <h2 class="text-4xl font-extrabold text-gray-50 mb-12">My Toolkit</h2>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+                        <!-- Tool 1: Figma -->
+                        <div class="bg-dark-purple-100 rounded-lg p-4 shadow-xl flex flex-col items-center justify-center transition-transform transform hover:scale-105">
+                            <img src="https://miro.medium.com/v2/resize:fit:1400/1*6XgfDCVn81AYX68Xvd2I-g@2x.png" class="tool-logo mb-2">
+                            <p class="text-lg font-semibold text-gray-300">Figma</p>
+                        </div>
+                        <!-- Tool 2: Asesprite -->
+                        <div class="bg-dark-purple-100 rounded-lg p-4 shadow-xl flex flex-col items-center justify-center transition-transform transform hover:scale-105">
+                            <img src="https://share.natebeaty.com//aseprite/aseprite.png" class="tool-logo mb-2">
+                            <p class="text-lg font-semibold text-gray-300">Asesprite</p>
+                        </div>
+                        <!-- Tool 3: Canva -->
+                        <div class="bg-dark-purple-100 rounded-lg p-4 shadow-xl flex flex-col items-center justify-center transition-transform transform hover:scale-105">
+                            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/canva-icon.png" class="tool-logo mb-2">
+                            <p class="text-lg font-semibold text-gray-300">Canva</p>
+                        </div>
+                        <!-- Tool 4: Procreate -->
+                        <div class="bg-dark-purple-100 rounded-lg p-4 shadow-xl flex flex-col items-center justify-center transition-transform transform hover:scale-105">
+                            <img src="https://assets.procreate.art/img/procreate-icon-search-display.png" class="tool-logo mb-2">
+                            <p class="text-lg font-semibold text-gray-300">Illustrator</p>
+                        </div>
+                        <!-- Tool 5: Miro -->
+                        <div class="bg-dark-purple-100 rounded-lg p-4 shadow-xl flex flex-col items-center justify-center transition-transform transform hover:scale-105">
+                            <img src="https://files.readme.io/17d4a23-miro-logo-color-square.png" class="tool-logo mb-2">
+                            <p class="text-lg font-semibold text-gray-300">Miro</p>
+                        </div>
+                        <!-- Tool 6: Trello -->
+                        <div class="bg-dark-purple-100 rounded-lg p-4 shadow-xl flex flex-col items-center justify-center transition-transform transform hover:scale-105">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174874.png" class="tool-logo mb-2">
+                            <p class="text-lg font-semibold text-gray-300">Trello</p>
+                        </div>
+                        <!-- Tool 7: Unity -->
+                        <div class="bg-dark-purple-100 rounded-lg p-4 shadow-xl flex flex-col items-center justify-center transition-transform transform hover:scale-105">
+                            <img src="https://preview.redd.it/81nwobjayd181.png?width=512&format=png&auto=webp&s=027cac2b3ddd6f7b3f5e60a783706d1d0e8151ec" class="tool-logo mb-2">
+                            <p class="text-lg font-semibold text-gray-300">Unity</p>
+                        </div>
+                        <!-- Tool 8: Visual Studio -->
+                        <div class="bg-dark-purple-100 rounded-lg p-4 shadow-xl flex flex-col items-center justify-center transition-transform transform hover:scale-105">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/1200px-Visual_Studio_Icon_2019.svg.png" class="tool-logo mb-2">
+                            <p class="text-lg font-semibold text-gray-300">Visual Studio</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quote Section 1 -->
+                <div class="mt-16 bg-dark-purple-100 rounded-xl p-8 shadow-xl text-center max-w-4xl mx-auto">
+                    <p class="text-xl lg:text-2xl font-medium text-gray-300 italic mb-4">
+                        "Malin's strength lies in her ability to ask the right questions, guiding her team to re-evaluate and find the best possible solution."
+                    </p>
+                    <p class="text-right font-semibold text-purple-400">- Victor UX Teacher</p>
+                </div>
+                
+                <!-- Quote Section 2 -->
+                <div class="mt-8 bg-dark-purple-100 rounded-xl p-8 shadow-xl text-center max-w-4xl mx-auto">
+                    <p class="text-xl lg:text-2xl font-medium text-gray-300 italic mb-4">
+                        "Design is not just about making things look good; it's about making them work better for people. A user-friendly design is like a good conversation - effortless, intuitive, and leaves you feeling understood."
+                    </p>
+                    <p class="text-right font-semibold text-purple-400">- Malin</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <!-- Call to Action -->
+        <section id="contact" class="py-16 sm:py-24 bg-dark-purple-200">
+            <div class="container mx-auto px-4 max-w-2xl text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-50">Let's Connect</h2>
+                <p class="text-lg text-gray-400 mb-8">
+                    Interested in how I can help with your next project? Get in touch!
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <!-- Update the href with your email address -->
+                    <a href="mailto:your.email@example.com" class="bg-purple-600 text-white p-3 rounded-full hover:bg-purple-700 transition-colors duration-300 transform hover:scale-110 shadow-lg" aria-label="Email Me">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.412h24v-15.412l-12 9.725z"/>
+                        </svg>
+                    </a>
+                    <!-- Update the href with your LinkedIn profile URL -->
+                    <a href="https://www.linkedin.com/in/malin-bergfjord-669115125" class="bg-gray-700 text-gray-50 p-3 rounded-full hover:bg-gray-600 transition-colors duration-300 transform hover:scale-110 shadow-lg" aria-label="LinkedIn Profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-purple-200 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Malin. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
