@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Malin | UX Designer Portfolio</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // Custom Tailwind colors to create a more cohesive color scheme
         tailwind.config = {
           theme: {
             extend: {
               colors: {
-                // Brighter, more purple-toned dark colors for a cohesive look
                 'dark-purple-100': '#2E283C',
                 'dark-purple-200': '#282334'
               }
@@ -39,6 +36,12 @@
         .btn-glow:hover {
             box-shadow: 0 0 15px rgba(139, 92, 246, 0.6);
         }
+        /* Custom style for the gradient divider */
+        .gradient-divider {
+            height: 2px;
+            background: linear-gradient(to right, #2E283C, #8b5cf6, #2E283C);
+            border: none;
+        }
     </style>
 </head>
 <body class="text-gray-200">
@@ -47,24 +50,47 @@
     <header class="bg-dark-purple-100 shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             
-            <!-- UPDATED: Logo and Name Integration -->
+            <!-- Logo and Name Integration -->
             <a href="index.html" class="flex items-center space-x-3 text-2xl font-bold text-gray-50 group">
-                <!-- Replace the src URL below with your actual logo image -->
                 <img 
                     class="h-8 w-8 rounded-full ring-2 ring-purple-400 p-0.5 object-cover transition duration-300 group-hover:ring-purple-300" 
                     src="https://i.imgur.com/Z7YoHbZ.png" 
                     alt="Malin's Portfolio Logo"
                 >
-                <span>Malin</span>
+                <span>Malin Bergfjord</span>
             </a>
             
-            <nav>
-                <ul class="flex space-x-6 font-medium">
-                    <li><a href="about-me.html" class="text-gray-400 hover:text-purple-400 transition-colors duration-300">About</a></li>
+            <!-- DESKTOP Navigation Menu -->
+            <nav class="hidden md:flex items-center">
+                <ul class="flex space-x-6 font-medium mr-4">
+                    <!-- Highlighted "About" link for the active page -->
+                    <li><a href="about-me.html" class="text-purple-400 font-semibold transition-colors duration-300">About</a></li>
                     <li><a href="index.html#projects" class="text-gray-400 hover:text-purple-400 transition-colors duration-300">Projects</a></li>
                     <li><a href="index.html#contact" class="text-gray-400 hover:text-purple-400 transition-colors duration-300">Contact</a></li>
                 </ul>
             </nav>
+
+            <!-- MOBILE Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-400 hover:text-purple-400 hover:bg-dark-purple-200 transition-colors duration-300 focus:outline-none">
+                <!-- Hamburger Icon (Menu) -->
+                <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+                <!-- Close Icon (X) - Hidden initially -->
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- MOBILE Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-dark-purple-100 shadow-xl border-t border-gray-700/50">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <!-- Highlighted "About" link for active page in mobile view -->
+                <a href="about-me.html" class="block py-2 text-base font-medium text-purple-400 bg-dark-purple-200 rounded-lg transition-colors duration-300 mobile-nav-link">About</a>
+                <a href="index.html#projects" class="block py-2 text-base font-medium text-gray-300 hover:bg-dark-purple-200 hover:text-purple-400 rounded-lg transition-colors duration-300 mobile-nav-link">Projects</a>
+                <a href="index.html#contact" class="block py-2 text-base font-medium text-gray-300 hover:bg-dark-purple-200 hover:text-purple-400 rounded-lg transition-colors duration-300 mobile-nav-link">Contact</a>
+            </div>
         </div>
     </header>
     <main>
@@ -226,10 +252,10 @@
                             <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/canva-icon.png" class="tool-logo mb-2">
                             <p class="text-lg font-semibold text-gray-300">Canva</p>
                         </div>
-                        <!-- Tool 4: Procreate -->
+                        <!-- Tool 4: Procreate (Changed label from Illustrator to Procreate to match image/context) -->
                         <div class="bg-dark-purple-100 rounded-lg p-4 shadow-xl flex flex-col items-center justify-center transition-transform transform hover:scale-105">
                             <img src="https://assets.procreate.art/img/procreate-icon-search-display.png" class="tool-logo mb-2">
-                            <p class="text-lg font-semibold text-gray-300">Illustrator</p>
+                            <p class="text-lg font-semibold text-gray-300">Procreate</p>
                         </div>
                         <!-- Tool 5: Miro -->
                         <div class="bg-dark-purple-100 rounded-lg p-4 shadow-xl flex flex-col items-center justify-center transition-transform transform hover:scale-105">
@@ -273,7 +299,6 @@
         </section>
 
         <!-- Call to Action -->
-        <!-- Call to Action -->
         <section id="contact" class="py-16 sm:py-24 bg-dark-purple-200">
             <div class="container mx-auto px-4 max-w-2xl text-center">
                 <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-50">Let's Connect</h2>
@@ -281,14 +306,14 @@
                     Interested in how I can help with your next project? Get in touch!
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                    <!-- Update the href with your email address -->
-                    <a href="mailto:your.email@example.com" class="bg-purple-600 text-white p-3 rounded-full hover:bg-purple-700 transition-colors duration-300 transform hover:scale-110 shadow-lg" aria-label="Email Me">
+                    <!-- EMAIL BUTTON: Added flex, items-center, justify-center for centering and w-fit and mx-auto for size/centering on mobile. -->
+                    <a href="mailto:malin.bergfjord@gmail.com" class="flex items-center justify-center w-fit mx-auto sm:mx-0 bg-purple-600 text-white p-3 rounded-full hover:bg-purple-700 transition-colors duration-300 transform hover:scale-110 shadow-lg" aria-label="Email Me">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.412h24v-15.412l-12 9.725z"/>
                         </svg>
                     </a>
-                    <!-- Update the href with your LinkedIn profile URL -->
-                    <a href="https://www.linkedin.com/in/malin-bergfjord-669115125" class="bg-gray-700 text-gray-50 p-3 rounded-full hover:bg-gray-600 transition-colors duration-300 transform hover:scale-110 shadow-lg" aria-label="LinkedIn Profile">
+                    <!-- LINKEDIN BUTTON: Added flex, items-center, justify-center for centering and w-fit and mx-auto for size/centering on mobile. -->
+                    <a href="https://www.linkedin.com/in/malin-bergfjord-669115125" class="flex items-center justify-center w-fit mx-auto sm:mx-0 bg-gray-700 text-gray-50 p-3 rounded-full hover:bg-gray-600 transition-colors duration-300 transform hover:scale-110 shadow-lg" aria-label="LinkedIn Profile">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                         </svg>
@@ -297,11 +322,90 @@
             </div>
         </section>
     </main>
+<!-- START: Scroll To Top Button Code -->
+    <button id="scrollToTopBtn" 
+            class="fixed bottom-6 right-6 z-50 p-3 bg-purple-600 text-white rounded-full shadow-2xl 
+                   opacity-0 transition-opacity duration-300 transform hover:scale-110 btn-glow 
+                   focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50" 
+            aria-label="Return to top" 
+            style="pointer-events: none;">
+        <!-- Arrow up icon (SVG for modern, clean look) -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up">
+            <path d="m5 12 7-7 7 7"/>
+            <path d="M12 19V5"/>
+        </svg>
+    </button>
+    <!-- END: Scroll To Top Button Code -->
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // ======================================
+            // 1. SCROLL TO TOP LOGIC
+            // ======================================
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+            const scrollFunction = () => {
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                    scrollToTopBtn.style.opacity = '1';
+                    scrollToTopBtn.style.pointerEvents = 'auto';
+                } else {
+                    scrollToTopBtn.style.opacity = '0';
+                    scrollToTopBtn.style.pointerEvents = 'none';
+                }
+            };
+
+            const topFunction = () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' 
+                });
+            };
+
+            window.onscroll = scrollFunction; 
+            scrollToTopBtn.addEventListener('click', topFunction);
+
+            // ======================================
+            // 2. MOBILE MENU LOGIC
+            // ======================================
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            // Get all mobile links to close the menu after navigation
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+            function toggleMobileMenu() {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    menuIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+            }
+
+            // Toggle the menu when the button is clicked
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+            // Close the menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    // Only close if the menu is currently visible
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        toggleMobileMenu();
+                    }
+                });
+            });
+        });
+    </script>
     <!-- Footer -->
     <footer class="bg-dark-purple-200 text-gray-400 py-8">
         <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 Malin. All rights reserved.</p>
+            <p>&copy; 2025 Malin Bergfjord. All rights reserved.</p>
         </div>
     </footer>
 </body>
